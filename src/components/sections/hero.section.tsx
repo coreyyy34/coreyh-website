@@ -16,7 +16,7 @@ export const HeroSection = () => {
 	return (
 		<Section id="hero">
 			<SectionContent>
-				<div className="flex flex-col md:flex-row items-center py-16">
+				<div className="flex flex-col md:flex-row items-center md:py-16">
 					<div className="md:w-1/2 z-10">
 						<Badge text="Student Software Engineer" />
 						<h1 className="sr-only">Hi, I&apos;m Corey</h1>
