@@ -1,4 +1,6 @@
 import { Colour } from "@/types/colour.type";
+import clsx, { ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 /**
  * Generates Tailwind CSS utility classes based on a color.
@@ -16,3 +18,7 @@ export const getColorClasses = (colour: Colour) => ({
 	hoverBorder: `hover:border-${colour}-500/50`,
 	hoverShadow: `hover:shadow-${colour}-500/10`,
 });
+
+export const cn = (...inputs: ClassValue[]) => {
+	return twMerge(clsx(inputs));
+};
