@@ -41,7 +41,13 @@ export const HeroSection = () => {
 								<ArrowRight className="ml-2" size={16} />
 							</Button>
 
-							<Button variant="outline">GitHub</Button>
+							<Button
+								href="https://github.com/coreyyy34"
+								target="_blank"
+								variant="outline"
+							>
+								GitHub
+							</Button>
 						</div>
 					</div>
 					<div className="md:w-1/2 mt-12 md:mt-0 flex justify-center z-10">
