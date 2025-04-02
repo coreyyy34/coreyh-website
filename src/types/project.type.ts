@@ -4,7 +4,7 @@ import { TechStack } from "./technology.type";
 /**
  * Represents a project with detailed attributes.
  */
-type Project = {
+export type Project = {
 	/**
 	 * The title of the project.
 	 */
