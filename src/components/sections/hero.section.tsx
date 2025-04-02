@@ -36,7 +36,7 @@ export const HeroSection = () => {
 							systems.
 						</p>
 						<div className="flex flex-wrap gap-4">
-							<Button>
+							<Button href="mailto:me@coreyh.nz">
 								Contact Me{" "}
 								<ArrowRight className="ml-2" size={16} />
 							</Button>
