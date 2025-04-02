@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	--background: #0a0a0a;
+	--foreground: #ededed;
 }
 
 @theme inline {
@@ -11,12 +11,11 @@
 	--font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
-}
+@source inline('from-{gray,black,red,orange,amber,yellow,green,emerald,teal,cyan,blue,indigo,violet,purple,fuchsia,pink,lime}-500/20');
+@source inline('to-{gray,black,red,orange,amber,yellow,green,emerald,teal,cyan,blue,indigo,violet,purple,fuchsia,pink,lime}-500/20');
+@source inline('text-{gray,black,red,orange,amber,yellow,green,emerald,teal,cyan,blue,indigo,violet,purple,fuchsia,pink,lime}-400');
+@source inline('{hover:shadow,bg}-{gray,black,red,orange,amber,yellow,green,emerald,teal,cyan,blue,indigo,violet,purple,fuchsia,pink,lime}-500/10');
+@source inline('{hover:border,bg}-{gray,black,red,orange,amber,yellow,green,emerald,teal,cyan,blue,indigo,violet,purple,fuchsia,pink,lime}-500/50');
 
 body {
 	background: var(--background);
