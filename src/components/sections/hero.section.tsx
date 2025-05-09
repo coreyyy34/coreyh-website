@@ -16,7 +16,7 @@ export const HeroSection = () => {
 	return (
 		<Section id="hero">
 			<SectionContent>
-				<div className="flex flex-col md:flex-row items-center py-16">
+				<div className="flex flex-col md:flex-row items-center md:py-16">
 					<div className="md:w-1/2 z-10">
 						<Badge text="Student Software Engineer" />
 						<h1 className="sr-only">Hi, I&apos;m Corey</h1>
@@ -36,12 +36,18 @@ export const HeroSection = () => {
 							systems.
 						</p>
 						<div className="flex flex-wrap gap-4">
-							<Button>
+							<Button href="mailto:me@coreyh.nz">
 								Contact Me{" "}
 								<ArrowRight className="ml-2" size={16} />
 							</Button>
 
-							<Button variant="outline">GitHub</Button>
+							<Button
+								href="https://github.com/coreyyy34"
+								target="_blank"
+								variant="outline"
+							>
+								GitHub
+							</Button>
 						</div>
 					</div>
 					<div className="md:w-1/2 mt-12 md:mt-0 flex justify-center z-10">

@@ -1,10 +1,14 @@
 import { cn } from "@/lib/util";
 import { cva, VariantProps } from "class-variance-authority";
 import Link from "next/link";
-import { ButtonHTMLAttributes, forwardRef } from "react";
+import {
+	ButtonHTMLAttributes,
+	forwardRef,
+	HTMLAttributeAnchorTarget,
+} from "react";
 
 export const buttonVariants = cva(
-	"inline-flex items-center justify-center rounded-md font-medium transition-all duration-500 focus:outline-none focus:ring-1 focus:ring-offset-1",
+	"inline-flex items-center justify-center rounded-md font-medium transition-all duration-500 focus:outline-none focus:ring-1 focus:ring-offset-1 cursor-pointer",
 	{
 		variants: {
 			variant: {
@@ -31,10 +35,11 @@ interface ButtonProps
 	extends ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
 	href?: string;
+	target?: HTMLAttributeAnchorTarget;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-	({ variant, size, className, href, ...props }, ref) => {
+	({ variant, size, className, href, target, ...props }, ref) => {
 		const button = (
 			<button
 				ref={ref}
@@ -43,7 +48,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 			/>
 		);
 
-		return href ? <Link href={href}>{button}</Link> : button;
+		return href ? (
+			<Link href={href} target={target}>
+				{button}
+			</Link>
+		) : (
+			button
+		);
 	}
 );
 
