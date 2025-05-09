@@ -17,7 +17,8 @@ export type Project = {
 		| "Full Stack Web Application"
 		| "Frontend Application"
 		| "Backend Application"
-		| "JavaFX Application";
+		| "JavaFX Application"
+		| "Embedded Application";
 
 	/**
 	 * A detailed description of the project, explaining its purpose and functionality.

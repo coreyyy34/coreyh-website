@@ -52,13 +52,6 @@ export const HeroSection = () => {
 								<div className="w-56 h-56 md:w-72 md:h-72 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 p-1">
 									<div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center overflow-hidden">
 										<Code size={64} />
-										{/* <Image
-                                        src="/placeholder.svg?height=300&width=300"
-                                        alt="Profile"
-                                        width={300}
-                                        height={300}
-                                        className="object-cover"
-                                    /> */}
 									</div>
 								</div>
 							</div>
@@ -67,7 +60,6 @@ export const HeroSection = () => {
 				</div>
 			</SectionContent>
 			<BackgroundBeams />
-			<div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent"></div>
 		</Section>
 	);
 };
