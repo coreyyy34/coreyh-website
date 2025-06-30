@@ -14,7 +14,7 @@ interface SectionTitleProps {
 const SectionTitle: FC<SectionTitleProps> = ({ title, badge, description }) => {
   return (
     <motion.div
-      className="flex flex-col items-center gap-4 p-8"
+      className="flex flex-col items-center gap-4 p-8 text-center"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -26,12 +26,18 @@ const SectionTitle: FC<SectionTitleProps> = ({ title, badge, description }) => {
         </motion.div>
       )}
       {title && (
-        <motion.h1 className="text-5xl font-bold" variants={itemVariants}>
+        <motion.h1
+          className="text-5xl font-bold text-center"
+          variants={itemVariants}
+        >
           {title}
         </motion.h1>
       )}
       {description && (
-        <motion.p className="text-neutral-300" variants={itemVariants}>
+        <motion.p
+          className="text-neutral-300 text-center"
+          variants={itemVariants}
+        >
           {description}
         </motion.p>
       )}
