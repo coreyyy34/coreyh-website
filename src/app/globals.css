@@ -13,13 +13,27 @@
 
 @layer utilities {
   .bg-gradient {
-    @apply bg-purple-600 bg-gradient-to-tr from-violet-600 to-indigo-600 bg-[length:200%_100%] drop-shadow-[0_0_12px_rgba(136,67,220,0.8)] transition-all duration-500 hover:bg-[position:100%_0%];
+    @apply bg-violet-600 drop-shadow-[0_0_12px_rgba(136,67,220,0.8)] transition-all duration-500;
   }
+
+  @supports (background-image: linear-gradient(to top right, violet, indigo)) {
+    .bg-gradient {
+      @apply bg-gradient-to-tr from-violet-600 to-indigo-600 bg-[length:200%_100%] hover:bg-[position:100%_0%];
+    }
+  }
+
   .shadow-gradient {
     @apply shadow-[0_0_12px_rgba(136,67,220,0.8)];
   }
+
   .text-gradient {
-    @apply bg-purple-600 bg-gradient-to-r from-violet-600 to-cyan-600 bg-[length:200%_100%] bg-clip-text text-transparent transition-all duration-500 hover:bg-[position:100%_0%];
+    @apply text-violet-600 transition-all duration-500;
+  }
+
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .text-gradient {
+      @apply bg-gradient-to-r from-violet-600 to-cyan-600 bg-[length:200%_100%] bg-clip-text text-transparent hover:bg-[position:100%_0%];
+    }
   }
 }
 
